@@ -1,8 +1,10 @@
 import User from "@/modals/User";
 import { NextResponse } from "next/server";
 import bcrypt from 'bcrypt'
-export const dynamic = 'auto'
+import { unstable_noStore } from "next/cache";
 
+
+unstable_noStore()
 export async function POST(req, res) {
   try {
     const data = await req.json();

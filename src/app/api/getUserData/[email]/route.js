@@ -1,8 +1,11 @@
 import User from "@/modals/User";
 import { NextResponse } from "next/server";
 import { Connection } from "@/lib/Connection";
+import { unstable_noStore } from "next/cache";
 export const dynamic = 'auto'
 
+
+unstable_noStore()
 export async function GET(req, { params }) {
   await Connection();
 

@@ -4,6 +4,7 @@ import SearchFiltering from "../customComponents/SearchFiltering";
 import { MapFilterItems } from "../customComponents/create/MapFilterItems";
 import SkeletonCard from "../customComponents/SkeletonCard";
 
+unstable_noStore()
 const page = async ({ searchParams }) => {
   return (
     <>

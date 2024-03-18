@@ -1,8 +1,9 @@
 import Home from "@/modals/Home";
 import { NextResponse } from "next/server"
 import { Connection } from "@/lib/Connection";
-export const dynamic = 'auto'
+import { unstable_noStore } from "next/cache";
 
+unstable_noStore()
 export async function GET(req,{params}){
     await Connection();
 

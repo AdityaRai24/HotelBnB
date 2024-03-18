@@ -4,8 +4,9 @@ import NextAuth from "next-auth/next";
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcrypt";
-export const dynamic = 'auto'
+import { unstable_noStore } from "next/cache";
 
+unstable_noStore()
 const handler = NextAuth({
   credentials: {},
   providers: [

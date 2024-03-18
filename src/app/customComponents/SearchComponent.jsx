@@ -4,6 +4,7 @@ import NoItems from "./categories/NoItems";
 import { Connection } from "@/lib/Connection";
 import { getServerSession } from "next-auth";
 
+unstable_noStore()
 const getData = async (searchParams) => {
   try {
     await Connection();
