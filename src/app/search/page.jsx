@@ -5,7 +5,6 @@ import { MapFilterItems } from "../customComponents/create/MapFilterItems";
 import SkeletonCard from "../customComponents/SkeletonCard";
 
 const page = async ({ searchParams }) => {
-  console.log(searchParams)
   return (
     <>
       <div className="container mx-auto px-5 lg:px-10">

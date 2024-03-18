@@ -73,7 +73,7 @@ async function ShowItems({ searchParams }) {
   return (
     <>
 
-      {data.length === 0 ? (
+      {data?.length === 0 ? (
         <NoItems
           heading="No Items Found"
           text="No items here currently...Please come back later..."

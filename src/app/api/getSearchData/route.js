@@ -2,11 +2,13 @@ import { Connection } from "@/lib/Connection";
 import Home from "@/modals/Home";
 import { NextResponse } from "next/server";
 
+
+export const dynamic = 'auto'
 export async function GET(req) {
   try {
     await Connection();
-    const url = new URL(req.url);
-    const searchParams = new URLSearchParams(url.searchParams);
+    const url = new URL(req.url) || "";
+    const searchParams = new URLSearchParams(url.searchParams) || "";
 
     let queries = {};
 
@@ -29,7 +31,7 @@ export async function GET(req) {
       queries.bathroomCount = searchParams.get("bathrooms"); 
     }
     if (searchParams.get("filter")) {
-      queries.filter = searchParams.get("filter"); 
+      queries.categoryName = searchParams.get("filter"); 
     }
     console.log(queries,"tjese are quried")
     const response = await Home.find(queries).populate("postedBy");

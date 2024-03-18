@@ -1,6 +1,7 @@
 import Home from "@/modals/Home";
 import { Connection } from "@/lib/Connection";
 import { NextResponse } from "next/server";
+export const dynamic = 'auto'
 
 export async function GET(req) {
   try {

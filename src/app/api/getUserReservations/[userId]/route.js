@@ -1,6 +1,7 @@
 import Reservation from "@/modals/Reservation"
 import { Connection } from "@/lib/Connection";
 import { NextResponse } from "next/server"
+export const dynamic = 'auto'
 
 export async function GET(req,{params}){
     await Connection();

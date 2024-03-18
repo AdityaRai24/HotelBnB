@@ -1,6 +1,7 @@
 import User from "@/modals/User";
 import { NextResponse } from "next/server";
 import { Connection } from "@/lib/Connection";
+export const dynamic = 'auto'
 
 export async function GET(req, { params }) {
   await Connection();
